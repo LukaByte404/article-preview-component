@@ -23,6 +23,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 190px;
+  margin-left: 60px;
   max-width: 1440px;
 }
 
@@ -43,25 +44,29 @@ body {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   position: relative;
-  right: 5.3%;
+  right: 5.5%;
+  padding-top: 65px;
+  padding-right: 40px;
 }
 
 .text-wrapper p:nth-child(1) {
-  padding-top: 20px;
   font-size: 25px;
   font-weight: 600;
+  position: relative;
+  bottom: 40px;
   color: var(--Very-Dark-Grayish-Blue);
-  padding-right: 100px;
 }
 
 .text-wrapper p:nth-child(2) {
   color: var(--Very-Dark-Grayish-Blue);
-  padding-right: 170px;
+  position: relative;
+  bottom: 40px;
 }
 
 .avatar-icon {
   width: 50px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .avatar-wrapper {
@@ -69,11 +74,15 @@ body {
   gap: 100px;
   padding-right: 50px;
   padding-top: 15px;
+  position: relative;
+  bottom: 40px;
 }
 
 .avatar-wrapper img:nth-child(1) {
   width: 60px;
   height: 60px;
+  position: relative;
+  left: 6%;
 }
 
 .social-icons > .share-btn > img {
@@ -83,7 +92,8 @@ body {
 
 .social-icons > .share-btn {
   position: relative;
-  bottom: 60%;
+  bottom: 35%;
+  left: 105%;
 }
 
 .avatar-wrapper h3:nth-child(1) {
@@ -103,16 +113,17 @@ body {
   flex-direction: column;
   gap: 3px;
   position: relative;
-  right: 80px;
+  right: 50px;
+  top: 5px;
 }
 
 .social-icons {
   position: relative;
   left: 5px;
-  padding-top: 10px;
+  padding-top: 12px;
 }
 
-.social-icons > button {
+.share-btn {
   background-color: var(--Light-Grayish-Blue);
   padding: 10px;
   border-radius: 50%;
@@ -123,38 +134,35 @@ body {
 }
 
 .social-icons-window-visible {
-  display: none;
+  display: flex;
   gap: 30px;
-  padding: 15px 20px;
+  padding: 20px 25px;
   border-radius: 10px;
   background-color: var(--Very-Dark-Grayish-Blue);
+  position: absolute;
+  bottom: 168%;
+  left: -160%;
+}
+
+.social-icons > div > h5 {
+  color: #ffffff;
+  font-weight: 200;
+  letter-spacing: 5px;
 }
 
 .social-icons-window {
-  display: flex;
-  gap: 30px;
-  padding: 15px 20px;
-  border-radius: 10px;
-  background-color: var(--Very-Dark-Grayish-Blue);
-  position: relative;
-  bottom: 107%;
-  right: 10%;
+  display: none;
 }
 
-.social-icons-window::after {
+/* გასარჩევია */
+.social-icons-window-visible::after {
   content: "";
   position: absolute;
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 10px solid var(--Very-Dark-Grayish-Blue);
 }
-
-.social-icons-window > h5 {
-  color: #ffffff;
-  font-weight: 200;
-  letter-spacing: 5px;
-}
+/* გასარჩევია */
