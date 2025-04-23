@@ -22,36 +22,41 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 190px;
+  max-width: 1440px;
 }
 
 .main-wrapper > div > img {
-  width: 350px;
+  width: 424px;
   border-bottom-left-radius: 20px;
   border-top-left-radius: 20px;
+  margin-top: 5px;
+  clip-path: inset(0 80px 0 0);
 }
 
 .text-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 20px;
   background-color: #ffffff;
-  padding-left: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  right: 5.3%;
 }
 
 .text-wrapper p:nth-child(1) {
-  padding-right: 155px;
   padding-top: 20px;
   font-size: 25px;
   font-weight: 600;
   color: var(--Very-Dark-Grayish-Blue);
+  padding-right: 100px;
 }
 
 .text-wrapper p:nth-child(2) {
-  padding-right: 150px;
   color: var(--Very-Dark-Grayish-Blue);
+  padding-right: 170px;
 }
 
 .avatar-icon {
@@ -61,12 +66,24 @@ body {
 
 .avatar-wrapper {
   display: flex;
-  justify-content: space-between;
-  padding-top: 25px;
+  gap: 100px;
+  padding-right: 50px;
+  padding-top: 15px;
 }
 
 .avatar-wrapper img:nth-child(1) {
-  margin-bottom: 30px;
+  width: 60px;
+  height: 60px;
+}
+
+.social-icons > .share-btn > img {
+  width: 20px;
+  height: 20px;
+}
+
+.social-icons > .share-btn {
+  position: relative;
+  bottom: 60%;
 }
 
 .avatar-wrapper h3:nth-child(1) {
@@ -84,12 +101,60 @@ body {
 .avatar-wrapper > div {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  margin-left: 20px;
-  padding-right: 160px;
+  gap: 3px;
+  position: relative;
+  right: 80px;
 }
 
 .social-icons {
-  padding-left: 30px;
+  position: relative;
+  left: 5px;
   padding-top: 10px;
+}
+
+.social-icons > button {
+  background-color: var(--Light-Grayish-Blue);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+
+.social-icons-window-visible {
+  display: none;
+  gap: 30px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background-color: var(--Very-Dark-Grayish-Blue);
+}
+
+.social-icons-window {
+  display: flex;
+  gap: 30px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background-color: var(--Very-Dark-Grayish-Blue);
+  position: relative;
+  bottom: 107%;
+  right: 10%;
+}
+
+.social-icons-window::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--Very-Dark-Grayish-Blue);
+}
+
+.social-icons-window > h5 {
+  color: #ffffff;
+  font-weight: 200;
+  letter-spacing: 5px;
 }
