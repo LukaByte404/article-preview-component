@@ -13,13 +13,15 @@ shareBtn.addEventListener("click", () => {
     headers.className = "none";
     headers2.className = "none";
     avatar.className = "none";
+    avatar.style.borderRadius = "40px";
   } else {
     socialIcons.className = "social-icons-window";
     shareBtn.style.backgroundColor = "hsl(210, 46%, 95%)";
     shareImg.style.filter =
       "brightness(0.5) sepia(1) saturate(0.5) hue-rotate(180deg)";
     headers.className = "show";
-    headers2.classNAme = "show";
+    headers2.className = "show";
     avatar.className = "show";
+    avatar.style.borderRadius = "40px";
   }
 });
